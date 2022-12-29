@@ -1,7 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { createPortal } from 'react-dom'
-import reducers from '../reducers'
 
 const Todo = ({ onClick, completed, text }) => (
     <li
