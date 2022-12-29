@@ -1,21 +1,31 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { createPortal } from 'react-dom'
+import reducers from '../reducers'
 
 const Todo = ({ onClick, completed, text }) => (
-  <li
-    onClick={onClick}
-    style={{
-      textDecoration: completed ? 'line-through' : 'none'
-    }}
-  >
-    {text}
-  </li>
+    <li
+        style={{
+            textDecoration: completed ? 'line-through' : 'none',
+            color: completed ? 'red' : 'black'
+        }}
+
+    >
+        {text}
+        <input type="checkbox"
+            checked={completed}
+            onClick={onClick}
+        >
+        </input>
+
+
+    </li>
 )
 
 Todo.propTypes = {
-  onClick: PropTypes.func.isRequired,
-  completed: PropTypes.bool.isRequired,
-  text: PropTypes.string.isRequired
+    onClick: PropTypes.func.isRequired,
+    completed: PropTypes.bool.isRequired,
+    text: PropTypes.string.isRequired
 }
 
 export default Todo
