@@ -1,8 +1,17 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import styled from 'styled-components'
+
+const LinkButton=styled.button`
+border-radius: 15px;
+width: 205px;
+margin-top: 3px;
+vertical-align:top;
+height: 70px;
+`
 
 const Link = ({ active, children, onClick }) => (
-  <button
+  <LinkButton
     onClick={onClick}
     disabled={active}
     style={{
@@ -10,7 +19,7 @@ const Link = ({ active, children, onClick }) => (
     }}
   >
     {children}
-  </button>
+  </LinkButton>
 )
 
 Link.propTypes = {

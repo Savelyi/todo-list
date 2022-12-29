@@ -4,12 +4,26 @@ import { Provider } from 'react-redux'
 import { createStore } from 'redux'
 import todoApp from './reducers'
 import App from './components/App'
+import {createGlobalStyle} from 'styled-components'
 
 const store = createStore(todoApp)
 
+const Global=createGlobalStyle`
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing:border-box;
+  font-size: 1.6rem;
+  font-family: 'Segoe UI';
+}
+`
 render(
-  <Provider store={store}>
+  <div>
+  <Provider store={store} >
+    <Global/>
     <App />
-  </Provider>,
+  </Provider>
+  </div>,
+    
   document.getElementById('root')
 )
