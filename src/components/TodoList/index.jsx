@@ -1,16 +1,17 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import Todo from '../Todo'
-import { TodosListWrapper } from './styled'
+import React from 'react';
+import PropTypes from 'prop-types';
+import Todo from '../Todo';
+import { TodosListWrapper } from './styled';
 
-
-const TodoList = ({ todos, toggleTodo }) => (
-  <TodosListWrapper>
-    {todos.map(todo => (
-      <Todo key={todo.id} {...todo} onClick={() => toggleTodo(todo.id)} />
-    ))}
-  </TodosListWrapper>
-)
+function TodoList({ todos, toggleTodo }) {
+  return (
+    <TodosListWrapper>
+      {todos.map((todo) => (
+        <Todo key={todo.id} {...todo} onClick={() => toggleTodo(todo.id)} />
+      ))}
+    </TodosListWrapper>
+  );
+}
 
 TodoList.propTypes = {
   todos: PropTypes.arrayOf(
@@ -21,6 +22,6 @@ TodoList.propTypes = {
     }).isRequired
   ).isRequired,
   toggleTodo: PropTypes.func.isRequired
-}
+};
 
-export default TodoList
+export default TodoList;
