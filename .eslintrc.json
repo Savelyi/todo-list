@@ -31,6 +31,7 @@
     "react/jsx-props-no-spreading": "off",
     "no-plusplus": "warn",
     "react/prop-types": "warn",
-    "no-return-assign": "warn"
+    "no-return-assign": "warn",
+    "default-param-last": "warn"
   }
 }
