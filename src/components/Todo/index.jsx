@@ -1,20 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import styled from 'styled-components'
-
-const TodoWrapper = styled.li`
-color: ${props => props.completed ? 'red' : 'black'};
-text-decoration: ${props => props.completed ? 'line-through' : 'none'};
-`
-
-const IsCompletedCheck = styled.input.attrs({ type: 'checkbox' })`
-  height: 63px;
-  left:920px;
-  top:18px;
-  margin-left: 10px;
-  position: sticky;
-  width: 30px;
-`
+import { TodoWrapper,IsCompletedCheck } from './styled'
 
 const Todo = ({ onClick, completed, text }) => (
     <TodoWrapper completed={completed}>

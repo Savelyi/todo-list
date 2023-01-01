@@ -8,7 +8,7 @@ const mapStateToProps = (state, ownProps) => ({
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
   onClick: () => dispatch(setVisibilityFilter(ownProps.filter))
-})
+})//убрать connect и добавить хук useDispatch в Link.js
 
 export default connect(
   mapStateToProps,

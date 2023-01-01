@@ -26,23 +26,25 @@ height: fit-content;
 const AddTodo = ({ dispatch }) => {
   let input
 
-  return (
+  return (//вынести в forms форму
     <div>
       <form
-        onSubmit={e => {
+        onSubmit={e => { //вынести функцию 
           e.preventDefault()
           if (!input.value.trim()) {
             return
           }
           dispatch(addTodo(input.value))
           input.value = ''
-        }}
+        }} //узнать, 
       >
-        <AddTodoInput ref={node => (input = node)} />
+        <AddTodoInput ref={node => (input = node)} />  {/*узнать, что происходит и исправить} */}
         <AddTodoButton type="submit">+</AddTodoButton>
       </form>
     </div>
   )
 }
+//TODO
+//добавить хуки  UseState UseRef
 
 export default connect()(AddTodo)

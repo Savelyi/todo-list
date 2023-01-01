@@ -23,7 +23,7 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
   toggleTodo: id => dispatch(toggleTodo(id))
 })
-
+//убрать connect и добавить хук useDispatch в .js
 export default connect(
   mapStateToProps,
   mapDispatchToProps
