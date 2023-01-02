@@ -2,17 +2,17 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { TodoWrapper, IsCompletedCheck } from './styled';
 
-function Todo({ onClick, completed, text }) {
+function Todo({ onChange, completed, text }) {
   return (
     <TodoWrapper completed={completed}>
       {text}
-      <IsCompletedCheck checked={completed} onClick={onClick} />
+      <IsCompletedCheck checked={completed} onChange={onChange} />
     </TodoWrapper>
   );
 }
 
 Todo.propTypes = {
-  onClick: PropTypes.func.isRequired,
+  onChange: PropTypes.func.isRequired,
   completed: PropTypes.bool.isRequired,
   text: PropTypes.string.isRequired
 };

@@ -5,14 +5,6 @@ const defaultState = {
 const todos = (state = defaultState, action) => {
   switch (action.type) {
     case 'ADD_TODO':
-      // return [
-      //   ...state,
-      //   {
-      //     id: action.id,
-      //     text: action.text,
-      //     completed: false
-      //   }
-      // ];
       return {
         ...state,
         todosList: [
@@ -25,7 +17,7 @@ const todos = (state = defaultState, action) => {
         ]
       };
     case 'TOGGLE_TODO':
-      return state.todosList.map((todo) =>
+      return state.todosList?.map((todo) =>
         todo.id === action.id ? { ...todo, completed: !todo.completed } : todo
       );
     default:

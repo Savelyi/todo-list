@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import { createGlobalStyle } from 'styled-components';
@@ -17,13 +17,12 @@ const Global = createGlobalStyle`
   font-family: 'Segoe UI';
 }
 `;
-render(
+const root = createRoot(document.getElementById('root'));
+root.render(
   <div>
     <Provider store={store}>
       <Global />
       <App />
     </Provider>
-  </div>,
-
-  document.getElementById('root')
+  </div>
 );
