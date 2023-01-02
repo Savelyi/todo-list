@@ -1,16 +1,31 @@
-const todos = (state = [], action) => {
+const defaultState = {
+  todosList: []
+};
+
+const todos = (state = defaultState, action) => {
   switch (action.type) {
     case 'ADD_TODO':
-      return [
+      // return [
+      //   ...state,
+      //   {
+      //     id: action.id,
+      //     text: action.text,
+      //     completed: false
+      //   }
+      // ];
+      return {
         ...state,
-        {
-          id: action.id,
-          text: action.text,
-          completed: false
-        }
-      ];
+        todosList: [
+          ...state.todosList,
+          {
+            id: action.id,
+            text: action.text,
+            completed: false
+          }
+        ]
+      };
     case 'TOGGLE_TODO':
-      return state.map((todo) =>
+      return state.todosList.map((todo) =>
         todo.id === action.id ? { ...todo, completed: !todo.completed } : todo
       );
     default:
