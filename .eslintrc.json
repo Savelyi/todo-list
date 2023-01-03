@@ -32,6 +32,7 @@
     "no-plusplus": "warn",
     "react/prop-types": "warn",
     "no-return-assign": "warn",
-    "default-param-last": "warn"
+    "default-param-last": "warn",
+    "react/forbid-prop-types": "off"
   }
 }

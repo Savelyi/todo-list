@@ -9,8 +9,6 @@ function TodoList() {
   const dispatch = useDispatch();
   const visibilityFilter = useSelector((state) => state.filter.filter);
   const todosList = useSelector((state) => state.todos.todosList);
-  // console.log(todosList.length);
-  //console.log(`output length - ${getVisibleTodos(todosList, visibilityFilter).length}`);
   return (
     <TodosListWrapper>
       {getVisibleTodos(todosList, visibilityFilter)?.map((todo) => (

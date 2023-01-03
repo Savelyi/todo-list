@@ -10,12 +10,10 @@ function AddTodoForm() {
 
   const handleClick = (e) => {
     e.preventDefault();
-    console.log(inputRef.current.value);
     if (!inputRef.current.value.trim()) {
       return;
     }
     inputRef.current.value = '';
-    console.log(todo);
     dispatch(addTodo(todo));
   };
 
