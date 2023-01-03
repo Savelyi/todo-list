@@ -8,6 +8,7 @@ const getVisibleTodos = (todos, filter) => {
   // console.log(`in method length - ${todos.length}`);
   switch (filter) {
     case VisibilityFilters.SHOW_ALL:
+      console.log(`SHOW_ALL length ${todos?.length}`);
       return todos;
     case VisibilityFilters.SHOW_COMPLETED:
       console.log(`SHOW_COMPLETED length - ${todos?.filter((t) => t.completed).length}`);
