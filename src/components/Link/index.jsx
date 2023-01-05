@@ -10,10 +10,7 @@ function Link({ filter, children }) {
   return (
     <LinkButton
       onClick={() => dispatch(setVisibilityFilter(filter))}
-      disabled={filter === visibilityFilter}
-      style={{
-        marginLeft: '4px'
-      }}>
+      disabled={filter === visibilityFilter}>
       {children}
     </LinkButton>
   );

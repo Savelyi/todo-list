@@ -15,7 +15,7 @@ function AddTodoForm() {
     }
     inputRef.current.value = '';
     dispatch(addTodo(todo));
-  };
+  }; //выносить в отдельный файл???
 
   return (
     <form

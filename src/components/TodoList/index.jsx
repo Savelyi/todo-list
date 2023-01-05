@@ -11,7 +11,7 @@ function TodoList() {
   const todosList = useSelector((state) => state.todos.todosList);
   return (
     <TodosListWrapper>
-      {getVisibleTodos(todosList, visibilityFilter)?.map((todo) => (
+      {getVisibleTodos(todosList, visibilityFilter).map((todo) => (
         <Todo key={todo.id} {...todo} onChange={() => dispatch(toggleTodo(todo.id))} />
       ))}
     </TodosListWrapper>
