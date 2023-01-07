@@ -1,5 +1,5 @@
+import { VisibilityFilters } from '@constants/VisibilityFilters';
 import PropTypes from 'prop-types';
-import { VisibilityFilters } from '../constants/VisibilityFilters';
 
 const getVisibleTodos = (todos, filter) => {
   switch (filter) {

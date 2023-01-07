@@ -1,4 +1,4 @@
-import { VisibilityFilters } from '../constants/VisibilityFilters';
+import { VisibilityFilters } from '@constants/VisibilityFilters';
 
 const defaultState = {
   filter: VisibilityFilters.SHOW_ALL

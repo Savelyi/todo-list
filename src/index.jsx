@@ -3,8 +3,8 @@ import { createRoot } from 'react-dom/client';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import { createGlobalStyle } from 'styled-components';
-import todoApp from './reducers/index';
-import App from './components/App/App';
+import todoApp from '@reducers/index';
+import App from '@components/App/App';
 
 const store = createStore(todoApp);
 

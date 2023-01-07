@@ -1,5 +1,5 @@
 import React from 'react';
-import AddTodoForm from '../../forms/AddTodo/index';
+import AddTodoForm from '@forms/AddTodo/index';
 
 function AddTodo() {
   return (

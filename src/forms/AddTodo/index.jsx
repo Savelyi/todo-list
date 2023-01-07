@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { useDispatch } from 'react-redux';
-import { addTodo } from '../../actions/addTodoAction';
+import { addTodo } from '@actions/addTodoAction';
 import { AddTodoButton, AddTodoInput } from './styled';
 
 function AddTodoForm() {

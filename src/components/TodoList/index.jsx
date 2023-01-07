@@ -1,9 +1,9 @@
-import React from 'react';
+import { toggleTodo } from '@actions/toggleTodo';
 import { useDispatch, useSelector } from 'react-redux';
-import Todo from '../Todo';
+import Todo from '@components/Todo';
+import React from 'react';
+import getVisibleTodos from '@helpers/getVisibleTodos';
 import { TodosListWrapper } from './styled';
-import { toggleTodo } from '../../actions/toggleTodo';
-import getVisibleTodos from '../../helpers/getVisibleTodos';
 
 function TodoList() {
   const dispatch = useDispatch();
