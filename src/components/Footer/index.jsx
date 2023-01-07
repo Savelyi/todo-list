@@ -1,5 +1,5 @@
 import React from 'react';
-import { VisibilityFilters } from '../../actions/VisibilityFilters';
+import { VisibilityFilters } from '../../constants/VisibilityFilters';
 import { ShowSpan, FooterWrapper } from './styled';
 import FilterLink from '../Link/index';
 

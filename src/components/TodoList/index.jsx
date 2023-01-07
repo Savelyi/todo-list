@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import Todo from '../Todo';
 import { TodosListWrapper } from './styled';
 import { toggleTodo } from '../../actions/toggleTodo';
-import getVisibleTodos from './getVisibleTodos';
+import getVisibleTodos from '../../helpers/getVisibleTodos';
 
 function TodoList() {
   const dispatch = useDispatch();

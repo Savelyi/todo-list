@@ -1,7 +1,7 @@
 import React from 'react';
 import Footer from '../Footer';
-import AddTodo from '../AddTodo/AddTodo';
-import TodoList from '../TodoList/index';
+import AddTodo from '../AddTodo';
+import TodoList from '../TodoList';
 import { ToDoListWrapper } from './styled';
 
 function App() {

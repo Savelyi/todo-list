@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { useDispatch } from 'react-redux';
-import { addTodo } from '../actions/addTodoAction';
+import { addTodo } from '../../actions/addTodoAction';
 import { AddTodoButton, AddTodoInput } from './styled';
 
 function AddTodoForm() {
@@ -15,7 +15,7 @@ function AddTodoForm() {
     }
     inputRef.current.value = '';
     dispatch(addTodo(todo));
-  }; //выносить в отдельный файл???
+  };
 
   return (
     <form
