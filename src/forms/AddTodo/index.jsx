@@ -1,35 +1,26 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { addTodo } from '@actions/addTodoAction';
 import { AddTodoButton, AddTodoInput } from './styled';
 
 function AddTodoForm() {
   const [todo, setTodo] = useState('');
-  const inputRef = useRef();
   const dispatch = useDispatch();
 
   const handleClick = (e) => {
     e.preventDefault();
-    if (!inputRef.current.value.trim()) {
-      return;
-    }
-    inputRef.current.value = '';
     dispatch(addTodo(todo));
+    setTodo('');
+  };
+
+  const handleChange = (event) => {
+    setTodo(event.target.value);
   };
 
   return (
-    <form
-      onSubmit={(e) => {
-        handleClick(e);
-      }}>
-      <AddTodoInput ref={inputRef} />
-      <AddTodoButton
-        type="submit"
-        onClick={() => {
-          setTodo(inputRef.current.value);
-        }}>
-        +
-      </AddTodoButton>
+    <form onSubmit={handleClick}>
+      <AddTodoInput value={todo} onChange={handleChange} />
+      <AddTodoButton type="submit">+</AddTodoButton>
     </form>
   );
 }
