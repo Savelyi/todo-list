@@ -13,6 +13,7 @@ i18n
     resources: {
       en: {
         translation: {
+          ShowSpan: 'Show',
           Filters: {
             Active: 'Active',
             Completed: 'Completed',
@@ -22,6 +23,7 @@ i18n
       },
       ru: {
         translation: {
+          ShowSpan: 'Фильтр',
           Filters: {
             Active: 'Активные',
             Completed: 'Завершённые',

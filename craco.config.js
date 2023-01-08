@@ -6,10 +6,10 @@ module.exports = {
   webpack: {
     alias: {
       "@components": resolvePath("./src/components"),
-      "@actions": resolvePath("./src/actions"),
+      "@actions": resolvePath("./src/store/actions"),
       "@constants": resolvePath("./src/constants"),
       "@helpers": resolvePath("./src/helpers"),
-      "@reducers": resolvePath("./src/reducers"),
+      "@reducers": resolvePath("./src/store/reducers"),
       "@forms": resolvePath("./src/forms"),
     },
   },
