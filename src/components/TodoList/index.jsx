@@ -9,10 +9,15 @@ function TodoList() {
   const dispatch = useDispatch();
   const visibilityFilter = useSelector((state) => state.filter.filter);
   const todosList = useSelector((state) => state.todos.todosList);
+
+  const handleClick = (id) => {
+    dispatch(toggleTodo(id));
+  };
+
   return (
     <TodosListWrapper>
       {getVisibleTodos(todosList, visibilityFilter).map((todo) => (
-        <Todo key={todo.id} {...todo} onChange={() => dispatch(toggleTodo(todo.id))} />
+        <Todo key={todo.id} {...todo} onChange={() => handleClick(todo.id)} />
       ))}
     </TodosListWrapper>
   );

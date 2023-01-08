@@ -7,10 +7,13 @@ import { LinkButton } from './styled';
 function Link({ filter, children }) {
   const dispatch = useDispatch();
   const visibilityFilter = useSelector((state) => state.filter.filter);
+
+  const handleClick = () => {
+    dispatch(setVisibilityFilter(filter));
+  };
+
   return (
-    <LinkButton
-      onClick={() => dispatch(setVisibilityFilter(filter))}
-      disabled={filter === visibilityFilter}>
+    <LinkButton onClick={handleClick} disabled={filter === visibilityFilter}>
       {children}
     </LinkButton>
   );
