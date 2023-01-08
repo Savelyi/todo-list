@@ -1,8 +1,5 @@
 {
-	"filters": {
-		"Description": "Язык",
-		"Active": "Активные",
-		"Completed": "Завершённые",
-		"All": "мои"
-	}
+  "Active": "Active",
+  "Completed": "Completed",
+  "All": "All"
 }

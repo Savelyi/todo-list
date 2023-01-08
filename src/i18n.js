@@ -5,9 +5,9 @@ import { initReactI18next } from 'react-i18next';
 
 i18n
   //
-  .use(Backend)
-  .use(LanguageDetector)
   .use(initReactI18next)
+  .use(LanguageDetector)
+  .use(Backend)
   .init({
     debug: true,
     fallbackLng: 'en',
