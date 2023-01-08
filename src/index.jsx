@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react';
+import React from 'react';
 import { createRoot } from 'react-dom/client';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
@@ -23,10 +23,10 @@ const root = createRoot(document.getElementById('root'));
 root.render(
   <div>
     <Provider store={store}>
-      <Suspense fallback={<div>Loading...</div>}>
-        <Global />
-        <App />
-      </Suspense>
+      <Global />
+      {/* <Suspense fallback={<div>Loading...</div>}> */}
+      <App />
+      {/* </Suspense> */}
     </Provider>
   </div>
 );

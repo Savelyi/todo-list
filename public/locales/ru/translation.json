@@ -1,8 +1,8 @@
 {
-    "Filters":{
-        "Desctiption":"Язык",
-        "Active":"Активные",
-        "Completed":"Завершённые",
-        "All":"Все"
-    }
+	"filters": {
+		"Description": "Язык",
+		"Active": "Активные",
+		"Completed": "Завершённые",
+		"All": "мои"
+	}
 }
