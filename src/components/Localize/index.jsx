@@ -7,7 +7,6 @@ function Localize() {
 
   const changeLanguage = (selectedOption) => {
     i18n.changeLanguage(selectedOption.value);
-    console.log(selectedOption);
   };
   const options = [
     { value: 'en', label: 'EN' },
