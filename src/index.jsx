@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { createRoot } from 'react-dom/client';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import { createGlobalStyle } from 'styled-components';
 import todoApp from '@reducers/index';
 import App from '@components/App/App';
+
+import './i18n';
 
 const store = createStore(todoApp);
 
@@ -21,8 +23,10 @@ const root = createRoot(document.getElementById('root'));
 root.render(
   <div>
     <Provider store={store}>
-      <Global />
-      <App />
+      <Suspense fallback={<div>Loading...</div>}>
+        <Global />
+        <App />
+      </Suspense>
     </Provider>
   </div>
 );
