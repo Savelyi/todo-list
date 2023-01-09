@@ -1,5 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import { languageOptions } from '@constants/Languages';
 import { ReactSelectElement } from './styled';
 
 function Localize() {
@@ -8,12 +9,8 @@ function Localize() {
   const changeLanguage = (selectedOption) => {
     i18n.changeLanguage(selectedOption.value);
   };
-  const options = [
-    { value: 'en', label: 'EN' },
-    { value: 'ru', label: 'RU' }
-  ];
 
-  return <ReactSelectElement options={options} onChange={changeLanguage} />;
+  return <ReactSelectElement options={languageOptions} onChange={changeLanguage} />;
 }
 
 export default Localize;
