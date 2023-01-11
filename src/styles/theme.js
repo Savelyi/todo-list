@@ -1,12 +1,9 @@
 export const baseTheme = {
   colors: {
     primary: '#39b2e5',
-    buttons: '#4c5263',
+    buttonsAndScroll: '#4c5263',
     completed: '#a10606',
-    danger: '#f00',
-
-    bg: '#000',
-    font: '#fff'
+    font: '#000'
   },
 
   typography: {
@@ -40,6 +37,36 @@ export const baseTheme = {
         width: '150px',
         height: '0%',
         left: '1%'
+      }
+    },
+    todoList: {
+      height: '18rem',
+      width: '47.5rem',
+      left: '0.15rem',
+      scrollbar: {
+        width: '7px'
+      },
+      scrollbarTrack: {
+        boxShadow: '5px 5px 5px -5px rgba(34, 60, 80, 0.2) inset'
+      },
+      todo: {
+        height: '2.5rem',
+        left: '45rem',
+        marginTop: '0.5rem',
+        marginLeft: '0.5rem',
+        width: '1.8rem'
+      }
+    },
+    addTodo: {
+      marginTop: '0.5rem',
+      height: '2.5rem',
+      borderRaidus: '0.7rem',
+      addTodoInput: {
+        width: '25rem'
+      },
+      addTodoButton: {
+        width: '2.5rem',
+        marginLeft: '2.5rem'
       }
     }
   }

@@ -1,20 +1,19 @@
 import styled from 'styled-components';
+import { baseTheme } from '../../styles/theme';
 
 export const TodosListWrapper = styled.ul`
   position: relative;
-  right: -5px;
-  max-height: 350px;
-  width: 990px;
+  max-height: ${baseTheme.settings.todoList.height};
+  width: ${baseTheme.settings.todoList.width};
+  left: ${baseTheme.settings.todoList.left};
   overflow-x: auto;
   &::-webkit-scrollbar {
-    width: 7px;
-    background-color: #f9f9fd;
+    width: ${baseTheme.settings.todoList.scrollbar.width};
   }
   &::-webkit-scrollbar-thumb {
-    background-color: #223c50;
+    background-color: ${baseTheme.colors.buttonsAndScroll};
   }
   &::-webkit-scrollbar-track {
-    -webkit-box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.2) inset;
-    background-color: lightblue;
+    -webkit-box-shadow: ${baseTheme.settings.todoList.scrollbarTrack.boxShadow};
   }
 `;

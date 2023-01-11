@@ -7,5 +7,5 @@ export const LinkButton = styled.button`
   min-width: ${baseTheme.settings.footer.filterLink.width};
   margin-left: ${baseTheme.settings.footer.filterLink.marginLeft};
   height: ${baseTheme.settings.footer.filterLink.height};
-  background-color: ${baseTheme.colors.buttons};
+  background-color: ${baseTheme.colors.buttonsAndScroll};
 `;
