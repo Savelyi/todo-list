@@ -1,10 +1,11 @@
 import styled from 'styled-components';
+import { baseTheme } from '../../styles/theme';
 
 export const LinkButton = styled.button`
-  border-radius: 15px;
-  width: 205px;
-  margin-top: 3px;
-  margin-left: '4px';
-  vertical-align: top;
-  height: 70px;
+  border-radius: ${baseTheme.settings.footer.filterLink.borderRadius};
+  width: fit-content;
+  min-width: ${baseTheme.settings.footer.filterLink.width};
+  margin-left: ${baseTheme.settings.footer.filterLink.marginLeft};
+  height: ${baseTheme.settings.footer.filterLink.height};
+  background-color: ${baseTheme.colors.buttons};
 `;

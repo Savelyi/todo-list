@@ -1,17 +1,17 @@
 import styled from 'styled-components';
+import { baseTheme } from '../../styles/theme';
 
 export const ToDoListWrapper = styled.div`
   position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-right: -50%;
+  top: ${baseTheme.settings.app.posCenter};
+  left: ${baseTheme.settings.app.posCenter};
+  border-radius: ${baseTheme.settings.app.borderRadius};
+  height: ${baseTheme.settings.app.height};
+  width: ${baseTheme.settings.app.width};
+  background: ${baseTheme.colors.primary};
   transform: translate(-50%, -50%);
-  border-radius: 30px;
-  height: 500px;
-  width: 1000px;
-  background: lightblue;
   flex-direction: column;
   display: flex;
-  align-items: center;
+  align-items: ${baseTheme.media.position};
   justify-content: flex-start;
 `;

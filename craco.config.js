@@ -11,6 +11,7 @@ module.exports = {
       "@helpers": resolvePath("./src/helpers"),
       "@reducers": resolvePath("./src/store/reducers"),
       "@forms": resolvePath("./src/forms"),
+      "@styles": resolvePath("./src/styles"),
     },
   },
 };
