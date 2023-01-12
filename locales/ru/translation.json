@@ -1,5 +1,8 @@
 {
-  "Active": "Активные",
-  "Completed": "Завершённые",
-  "All": "Все"
+  "ShowSpan": "Фильтр",
+  "Filters": {
+    "Active": "Активные",
+    "Completed": "Завершённые",
+    "All": "ол"
+  }
 }
