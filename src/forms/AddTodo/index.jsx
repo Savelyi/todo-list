@@ -9,6 +9,9 @@ function AddTodoForm() {
 
   const handleClick = (e) => {
     e.preventDefault();
+    if (todo.trim() === '') {
+      return;
+    }
     dispatch(addTodo(todo));
     setTodo('');
   };
