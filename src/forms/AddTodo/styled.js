@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { baseTheme } from '../../styles/theme';
+import { baseTheme } from '@styles/theme';
 
 export const AddTodoInput = styled.input`
   border-radius: ${baseTheme.settings.addTodo.borderRaidus};
