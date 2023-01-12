@@ -1,5 +1,8 @@
 {
-  "Active": "Active",
-  "Completed": "Completed",
-  "All": "All"
+  "ShowSpan": "Show",
+  "Filters": {
+    "Active": "Active",
+    "Completed": "Completed",
+    "All": "All"
+  }
 }
