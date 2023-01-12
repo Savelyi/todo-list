@@ -6,7 +6,7 @@ import { initReactI18next } from 'react-i18next';
 i18n
   .use(initReactI18next)
   .use(LanguageDetector)
-  .use(Backend) //не работает:/
+  .use(Backend)
   .init({
     debug: true,
     fallbackLng: 'en',
